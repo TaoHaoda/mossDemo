@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container" bindtap='onTapText2'>
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto" bindmosscommand="onSkillCommand" data-moss-speech="['支付','结账']">{{motto}}</text>
+  </view>
+  <view id="adav" bindtap='onTapText2'>
+    <text id="ada" bindtap='onTapText' >传统绑定与数据</text>
+  </view>
+</view>
