@@ -1,9 +1,9 @@
-//index.js
+//subpage.js
 //获取应用实例
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World Main',
+    motto: 'Hello World Sub',
     userInfo: {}
   },
   //事件处理函数
@@ -12,31 +12,25 @@ Page({
       url: '../logs/logs'
     })
   },
-  bindViewTapNavi: function () {
-    wx.navigateTo({
-      url: '../subpage/subpage'
-    });
-  },
   onTapText: function (res) {
     console.log("insideMP ---> tap ", res);
     wx.showToast({
       title: 'onTapText',
     });
     wx.addMossEventListener(
-      { mossSpeech: ['OKOK'], mossSkillset: "" }, 
-      function (res) { 
-        console.log("7 ", res); 
+      { mossSpeech: ['OKOK'], mossSkillset: "" },
+      function (res) {
+        console.log("7 ", res);
         wx.showToast({
-          title: 'MossCallback Main' + res,
+          title: 'MossCallback Sub' + res,
         })
-        return false; 
-    });
-
+        return false;
+      });
   },
   onTapText2: function (res) {
-    console.log("insideMP2 ---> tap2 ", res);
+    console.log("insideMP ---> tap2 ", res);
     wx.showToast({
-      title: 'onTapText2',
+      title: 'onTapText22',
     })
   },
   onSkillCommand: function (res) {
@@ -44,18 +38,6 @@ Page({
     wx.showToast({
       title: 'onSkillCommand',
     })
-  },
-  onSkillCommand2: function (res) {
-    console.log("insideMP2 ---> onSkillCommand2 ", res);
-    wx.showToast({
-      title: 'onSkillCommand2',
-    })
-  },
-
-  showDemoIndex: function (res) {
-    wx.navigateTo({
-      url: '../demoIndex/index',
-    });
   },
   onLoad: function () {
     console.log('onLoad')

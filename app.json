@@ -1,12 +1,18 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/demoIndex/index",
+    "pages/logs/logs",
+    "pages/subpage/subpage",
+    "pages/demoIndex/api/get-user-info/get-user-info",
+    "pages/demoIndex/api/get-phonenumber/get-phonenumber",
+    "pages/demoIndex/api/check-session/check-session",
+    "pages/demoIndex/api/login/login"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

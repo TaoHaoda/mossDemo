@@ -1,0 +1,31 @@
+<import src="../../common/head.wxml" />
+<import src="../../common/foot.wxml" />
+
+<view class="demo-container">
+  <template is="head" data="{{title: 'getPhoneNumber'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <view class="page-body-title">电话号码</view>
+        <block wx:if="{{hasPhoneNumber === false}}">
+          <text class="page-body-text">未获取</text>
+          <text class="page-body-text">点击绿色按钮可获取电话号码</text>
+        </block>
+        <block wx:if="{{hasPhoneNumber === true}}">
+          <text class="userinfo-nickname">{{detail.iv}}</text>
+          <text class="userinfo-nickname">{{detail.encryptedData}}</text>
+        </block>
+      </view>
+      <view class="page-body-info">
+        <text class="userinfo-debuglog">{{debugString}}</text>
+      </view>
+      <view class="btn-area">
+        <button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" bindtap="getPhoneNumberTap">获取电话号码</button>
+        <button bindtap="clear">清空</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

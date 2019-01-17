@@ -1,0 +1,20 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="demo-container">
+  <template is="head" data="{{title: 'checkSession'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <view class="page-body-title">登陆续期</view>
+          <text class="page-body-text">{{debugString}}</text>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="checkSession">登陆续期</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>
