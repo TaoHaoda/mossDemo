@@ -7,7 +7,8 @@
     "pages/demoIndex/api/get-user-info/get-user-info",
     "pages/demoIndex/api/get-phonenumber/get-phonenumber",
     "pages/demoIndex/api/check-session/check-session",
-    "pages/demoIndex/api/login/login"
+    "pages/demoIndex/api/login/login",
+    "pages/demoIndex/api/authorize/authorize"
   ],
   "window": {
     "backgroundTextStyle": "light",

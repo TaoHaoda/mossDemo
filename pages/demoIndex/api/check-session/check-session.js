@@ -20,5 +20,7 @@ Page({
     this.setData({
       debugString: JSON.stringify(res)
     })
+
+    const errMsg = res.errMsg
   }
 })

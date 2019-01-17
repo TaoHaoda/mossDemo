@@ -11,9 +11,10 @@ Page({
       debugString: JSON.stringify(res),
       detail: res.detail
     })
-    wx.addCard({
-      cardList: [],
-    })
+
+    const errMsg = e.detail.errMsg
+    const iv = e.detail.iv
+    const encryptedData = e.detail.encryptedData // 发至SP后台，用session_key解密
   },
   clear: function () {
     this.setData({

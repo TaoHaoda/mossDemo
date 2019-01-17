@@ -18,6 +18,9 @@ Page({
           }, {
             zh: '登录态续期',
             url: 'api/check-session/check-session'
+          }, {
+            zh: '授权',
+            url: 'api/authorize/authorize'
           }
         ]
       }

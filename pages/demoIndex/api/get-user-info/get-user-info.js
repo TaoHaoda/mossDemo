@@ -2,7 +2,7 @@ Page({
   data: {
     hasUserInfo: false,
     hasLogin: false,
-    userInfoString: ""
+    debugLog: ""
   },
   getUserInfo: function () {
     var that = this
@@ -20,18 +20,35 @@ Page({
         hasLogin: true
       })
       wx.getUserInfo({
+        withCredentials: true,
         success: function (res) {
           that.setData({
             hasUserInfo: true,
             userInfo: res.userInfo,
-            userInfoString: JSON.stringify(res)
+            debugLog: JSON.stringify(res)
           })
-          that.update()
+          
+          const userInfo = res.userInfo
+          const nickName = userInfo.nickName
+          const avatarUrl = userInfo.avatarUrl
+          const gender = userInfo.gender // 性别 0：未知、1：男、2：女
+          const province = userInfo.province
+          const city = userInfo.city
+          const country = userInfo.country
+
+          const rawData = res.rawData
+          const signature = res.signature 
+
+          // withCredentials为true
+          const encryptedData = res.encryptedData  // 发至SP后台，用session_key解密
+          const iv = res.iv
         },
         fail: function (res) {
           that.setData({
-            userInfoString: JSON.stringify(res)
+            debugLog: JSON.stringify(res)
           })
+
+          const errMsg = res.errMsg
         }
       })
     }

@@ -19,7 +19,7 @@
       </view>
       <view class="page-body-info">
         <block wx:if="{{hasUserInfo === true}}">
-          <text class="userinfo-debuglog">{{userInfoString}}</text>
+          <text class="userinfo-debuglog">{{debugLog}}</text>
         </block>
       </view>
       <view class="btn-area">

@@ -17,6 +17,8 @@ Page({
           code: res.code,
           debugLog: JSON.stringify(res)
         })
+
+        const code = res.code // 把code发至SP后台
       },
       fail: function (res) {
         that.setData({
@@ -24,6 +26,8 @@ Page({
           code: res.errMsg,
           debugLog: JSON.stringify(res)
         })
+        
+        const errMsg = res.errMsg
       }
     })
   }
