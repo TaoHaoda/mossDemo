@@ -89,7 +89,7 @@ form{
   padding: 50rpx 0 150rpx 0;
 }
 .page-body-title {
-  margin-bottom: 100rpx;
+  /* margin-bottom: 100rpx; */
   font-size: 32rpx;
 }
 .page-body-text {

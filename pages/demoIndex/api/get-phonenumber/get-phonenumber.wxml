@@ -13,12 +13,12 @@
           <text class="page-body-text">点击绿色按钮可获取电话号码</text>
         </block>
         <block wx:if="{{hasPhoneNumber === true}}">
-          <text class="userinfo-nickname">{{detail.iv}}</text>
-          <text class="userinfo-nickname">{{detail.encryptedData}}</text>
+          <text class="userinfo-nickname">区号：{{countryCode}}</text>
+          <text class="userinfo-nickname">电话号码：{{phoneNumber}}</text>
         </block>
       </view>
       <view class="page-body-info">
-        <text class="userinfo-debuglog">{{debugString}}</text>
+        <text class="userinfo-debuglog">{{debugLog}}</text>
       </view>
       <view class="btn-area">
         <button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" bindtap="getPhoneNumberTap">获取电话号码</button>

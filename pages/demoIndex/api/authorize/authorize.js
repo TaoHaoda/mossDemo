@@ -11,7 +11,7 @@ Page({
   authorize: function() {
     const that = this
     wx.authorize({
-      scope: 'getUserPhone',
+      scope: 'scope.getUserPhone',
       success: function(res) {
         that.setData({
           debugLog: JSON.stringify(res)
