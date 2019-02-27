@@ -13,14 +13,22 @@ Page({
   getPhoneNumber: function (res) {
     var that = this
     var openid = getApp().globalData.openid
+    console.log(JSON.stringify(res))
+    this.setData({
+      debugLog: JSON.stringify(res)
+    })
 
     if (openid) {
       // Has login
       let encryptedData = res.detail.encryptedData
       let iv = res.detail.iv
+      let errMsg = res.detail.errMsg
 
-      // 发至SP后台，用session_key解密
-      that.decrypt(encryptedData, iv, openid)
+      if (errMsg) {
+      } else {
+        // 发至SP后台，用session_key解密
+        that.decrypt(encryptedData, iv, openid)
+      }
     } else {
       // No login before
       this.setData({
@@ -29,28 +37,26 @@ Page({
       return
     }
 
-    function _getPhoneNumber(openid) {
-      wx.getPhoneNumber({
-        success: function (res) {
-          that.setData({
-            debugLog: JSON.stringify(res)
-          })
+    // function _getPhoneNumber(openid) {
+    //   wx.getPhoneNumber({
+    //     success: function (res) {
+    //       that.setData({
+    //         debugLog: JSON.stringify(res)
+    //       })
 
-          let encryptedData = res.encryptedData
-          let iv = res.iv
+    //       let encryptedData = res.encryptedData
+    //       let iv = res.iv
+    //       let errMsg = res.errMsg
 
-          // 发至SP后台，用session_key解密
-          that.decrypt(encryptedData, iv, openid)
-        },
-        fail: function (res) {
-          that.setData({
-            debugLog: JSON.stringify(res)
-          })
-
-          const errMsg = res.errMsg
-        }
-      })
-    }
+    //       if (errMsg){
+            
+    //       } else {
+    //         // 发至SP后台，用session_key解密
+    //         that.decrypt(encryptedData, iv, openid)
+    //       }
+    //     }
+    //   })
+    // }
   },
   clear: function () {
     this.setData({
