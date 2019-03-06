@@ -7,7 +7,9 @@ Page({
     purePhoneNumber: "",
     countryCode: "",
     debugLog: "",
-    detail: {}
+    detail: {},
+    hasBaseCarInfo: false,
+    plateNum: ""
   },
 
   getPhoneNumber: function (res) {
@@ -24,8 +26,7 @@ Page({
       let iv = res.detail.iv
       let errMsg = res.detail.errMsg
 
-      if (errMsg) {
-      } else {
+      if (encryptedData) {
         // 发至SP后台，用session_key解密
         that.decrypt(encryptedData, iv, openid)
       }
@@ -36,27 +37,40 @@ Page({
       })
       return
     }
+  },
 
-    // function _getPhoneNumber(openid) {
-    //   wx.getPhoneNumber({
-    //     success: function (res) {
-    //       that.setData({
-    //         debugLog: JSON.stringify(res)
-    //       })
+  getBaseCarInfo: function (res) {
+    var openid = getApp().globalData.openid
+    var that = this
 
-    //       let encryptedData = res.encryptedData
-    //       let iv = res.iv
-    //       let errMsg = res.errMsg
+    if (openid) {
+      wx.getBaseCarInfo({
+        success: function (res) {
+          that.setData({
+            debugLog: JSON.stringify(res)
+          })
 
-    //       if (errMsg){
-            
-    //       } else {
-    //         // 发至SP后台，用session_key解密
-    //         that.decrypt(encryptedData, iv, openid)
-    //       }
-    //     }
-    //   })
-    // }
+          let encryptedData = res.encryptedData
+          let iv = res.iv
+
+          // 发至SP后台，用session_key解密
+          that.decrypt(encryptedData, iv, openid)
+        },
+        fail: function (res) {
+          that.setData({
+            debugLog: JSON.stringify(res)
+          })
+
+          const errMsg = res.errMsg
+        }
+      })
+    } else {
+      // No login before
+      this.setData({
+        debugLog: "getPhoneNumber failed, 请先登录"
+      })
+      return
+    }
   },
   clear: function () {
     this.setData({
@@ -104,17 +118,32 @@ Page({
           var phoneNumber = res.data.data.phoneNumber // 电话号码
           var purePhoneNumber = res.data.data.purePhoneNumber // 完整手机号(区号+原始手机号)
           var countryCode = res.data.data.countryCode //  区号, 86
+
+          var plateNum = res.data.data.plateNum // 电话号码
+          var brand = res.data.data.brand // 完整手机号(区号+原始手机号)
+          var series = res.data.data.series //  区号, 86
+          var modelDesc = res.data.data.modelDesc //  区号, 86
+          var plateColor = res.data.data.plateColor //  区号, 86
+          var year = res.data.data.year //  区号, 86
+          
           var watermark = {
             appid: res.data.data.watermark.appid,
             timestamp: res.data.data.watermark.timestamp
           }
 
-          that.setData({
-            hasPhoneNumber: true,
-            phoneNumber: phoneNumber,
-            purePhoneNumber: purePhoneNumber,
-            countryCode: countryCode
-          })
+          if (phoneNumber) {
+            that.setData({
+              hasPhoneNumber: true,
+              phoneNumber: phoneNumber,
+              purePhoneNumber: purePhoneNumber,
+              countryCode: countryCode
+            })
+          } else if (plateNum) {
+            that.setData({
+              hasBaseCarInfo: true,
+              plateNum: plateNum
+            })
+          }
         } else {
           // Request failed
           console.log(res.errmsg)

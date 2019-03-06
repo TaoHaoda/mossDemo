@@ -66,7 +66,7 @@ Page({
 
         if (res.data.errcode == 0) {
           // Request success
-          getApp().globalData.openid = "ec8a2af1c5ef779b24ef3d0900c10efa"; //res.data.data.openid //腾讯车联开放平台openid,保存用于getUserInfo
+          getApp().globalData.openid = res.data.data.openid //腾讯车联开放平台openid,保存用于getUserInfo
           var sessionKey = res.data.data.session_key //会话密钥,demo后台会持久化session_key，用于解密getUserInfo
           var unionid = res.data.data.unionid //用户在开放平台的唯一标识符，在满足 UnionID 下发条件的情况下会返回
         } else {

@@ -13,7 +13,7 @@ Page({
             zh: '获取用户信息',
             url: 'api/get-user-info/get-user-info'
           }, {
-            zh: '获取电话号码',
+            zh: '获取电话号码以及车辆基本信息',
             url: 'api/get-phonenumber/get-phonenumber'
           }, {
             zh: '登录态续期',
@@ -21,6 +21,9 @@ Page({
           }, {
             zh: '授权',
             url: 'api/authorize/authorize'
+          }, {
+            zh: '导航',
+            url: 'api/navigate/navigate'
           }
         ]
       }

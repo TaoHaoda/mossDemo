@@ -16,12 +16,16 @@
           <text class="userinfo-nickname">区号：{{countryCode}}</text>
           <text class="userinfo-nickname">电话号码：{{phoneNumber}}</text>
         </block>
+        <block wx:if="{{hasBaseCarInfo === true}}">
+          <text class="userinfo-nickname">车牌：{{plateNum}}</text>
+        </block>
       </view>
       <view class="page-body-info">
         <text class="userinfo-debuglog">{{debugLog}}</text>
       </view>
       <view class="btn-area">
         <button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" bindtap="getPhoneNumberTap">获取电话号码</button>
+        <button type="primary" bindtap="getBaseCarInfo">获取车辆基本信息</button>
         <button bindtap="clear">清空</button>
       </view>
     </view>

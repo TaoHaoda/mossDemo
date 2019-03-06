@@ -1,0 +1,19 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="demo-container">
+  <template is="head" data="{{title: 'Navigate'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+        <button class="page-body-button" type="primary" bindtap="getLocation">定位</button>
+        <button class="page-body-button" type="primary" bindtap="navigateNative">腾讯地图导航</button>
+    </view>
+    <view class="page-section">
+        <text class="debuglog">{{debugLog}}
+        </text>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>
