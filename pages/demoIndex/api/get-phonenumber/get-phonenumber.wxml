@@ -6,7 +6,10 @@
 
   <view class="page-body">
     <view class="page-section">
-      <view class="page-body-info">
+      <view class="btn-area" wx:if="{{!hasLogin}}">
+        <text class="userinfo-debuglog">请先登陆</text>
+      </view>
+      <view class="page-body-info" wx:if="{{hasLogin}}">
         <view class="page-body-title">电话号码</view>
         <block wx:if="{{hasPhoneNumber === false}}">
           <text class="page-body-text">未获取</text>
@@ -23,7 +26,7 @@
       <view class="page-body-info">
         <text class="userinfo-debuglog">{{debugLog}}</text>
       </view>
-      <view class="btn-area">
+      <view class="btn-area" wx:if="{{hasLogin}}">
         <button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" bindtap="getPhoneNumberTap">获取电话号码</button>
         <button type="primary" bindtap="getBaseCarInfo">获取车辆基本信息</button>
         <button bindtap="clear">清空</button>

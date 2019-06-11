@@ -2,6 +2,7 @@ const signUtils = require("../../../../utils/sign.js");
 
 Page({
   data: {
+    hasLogin: false,
     hasPhoneNumber: false,
     phoneNumber: "",
     purePhoneNumber: "",
@@ -10,6 +11,12 @@ Page({
     detail: {},
     hasBaseCarInfo: false,
     plateNum: ""
+  },
+
+  onShow: function() {
+    this.setData({
+      hasLogin: (getApp().globalData.openid !== "")
+    })
   },
 
   getPhoneNumber: function (res) {
