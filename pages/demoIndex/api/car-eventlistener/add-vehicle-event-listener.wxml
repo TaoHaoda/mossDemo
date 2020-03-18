@@ -1,0 +1,15 @@
+<view class="demo-container">
+  <view class="page-body">
+    <view class="wrapper">
+        <view>速度: {{onSpeed}}</view>
+        <view>keycode: {{onKeyCode}}</view>
+    </view>
+    <view class="wrapper">
+        <view>油量: {{onRemainPower}}</view>
+        <view>转角: {{onAngle}}</view>
+    </view>
+    <view class="page-section">
+        <button class="page-body-button" type="primary" bindtap="onSpeedChange">监听车辆信息变化</button>
+    </view>
+  </view>
+</view>

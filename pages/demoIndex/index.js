@@ -24,6 +24,21 @@ Page({
           }, {
             zh: '导航',
             url: 'api/navigate/navigate'
+          }, {
+            zh: '获取车速',
+            url: 'api/speed/get-speed'
+          }, {
+            zh: '获取剩余油量',
+            url: 'api/power/get-remainpower'
+          }, {
+            zh: '获取车辆vin',
+            url: 'api/vin/get-vechicle-id'
+          }, {
+            zh: '获取方向盘转角',
+            url: 'api/wheelRotation/get-wheel-rotation-angle' 
+          }, {
+            zh: '监听车辆信息变化',
+            url: 'api/car-eventlistener/add-vehicle-event-listener'
           }
         ]
       }

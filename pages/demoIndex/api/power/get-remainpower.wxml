@@ -1,0 +1,11 @@
+<!--pages/demoIndex/api/speed/get-speed.wxml-->
+<view class="demo-container">
+  <view class="page-body">
+    <view class='show-content'>
+      <text class='speed-number'>{{power}}</text>
+    </view>
+    <view class="page-section">
+        <button class="page-body-button" type="primary" bindtap="getPower">获取剩余油量</button>
+    </view>
+  </view>
+</view>
