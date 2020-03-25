@@ -1,0 +1,11 @@
+<!--pages/demoIndex/api/speed/get-speed.wxml-->
+<view class="demo-container">
+  <view class="page-body">
+    <view class='speed-content'>
+      <text class='speed-number'>{{angle}}</text>
+    </view>
+    <view class="page-section">
+        <button class="page-body-button" type="primary" bindtap="getWheelRotationAngle">获取车辆方向盘转角</button>
+    </view>
+  </view>
+</view>

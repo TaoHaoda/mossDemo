@@ -1,0 +1,11 @@
+<!--pages/demoIndex/api/speed/get-speed.wxml-->
+<view class="demo-container">
+  <view class="page-body">
+    <view class='show-content'>
+      <text class='speed-number'>{{speed}}</text>
+    </view>
+    <view class="page-section">
+        <button class="page-body-button" type="primary" bindtap="getSpeed">获取车辆速度</button>
+    </view>
+  </view>
+</view>

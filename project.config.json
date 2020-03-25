@@ -13,12 +13,14 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.2",
-	"appid": "wx12eea9b0aa031457",
+	"appid": "wxd786341fe433552f",
 	"projectname": "moss-app-demo",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -28,13 +30,56 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/demoIndex/api/speed/get-speed",
+					"pathName": "pages/demoIndex/api/speed/get-speed",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demoIndex/api/power/get-remainpower",
+					"pathName": "pages/demoIndex/api/power/get-remainpower",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demoIndex/api/vin/get-vechicle-id",
+					"pathName": "pages/demoIndex/api/vin/get-vechicle-id",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demoIndex/api/wheelRotation/get-wheel-rotation-angle",
+					"pathName": "pages/demoIndex/api/wheelRotation/get-wheel-rotation-angle",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demoIndex/api/car-eventlistener/add-vehicle-event-listener",
+					"pathName": "pages/demoIndex/api/car-eventlistener/add-vehicle-event-listener",
+					"scene": null
+				}
+			]
 		}
 	}
 }

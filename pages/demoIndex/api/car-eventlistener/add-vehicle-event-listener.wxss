@@ -1,0 +1,30 @@
+.page-section {
+  margin-top: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+}
+.show-content {
+  width: 300rpx;
+  height: 200rpx;
+  background-color: #eee;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  text-align: center;
+  line-height: 200rpx;
+  font-size: 20px;
+}
+.wrapper{
+  padding: 6rpx 20rpx;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper view {
+  width: 50%;
+}

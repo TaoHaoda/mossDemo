@@ -1,0 +1,5 @@
+email=
+//r.tnpm.oa.com/:_password="{{TNPM_PASSWORD}}"
+//r.tnpm.oa.com/:username={{TNPM_USERNAME}}
+//r.tnpm.oa.com/:email={{TNPM_EMAIL}}
+//r.tnpm.oa.com/:always-auth=false
