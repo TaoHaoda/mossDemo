@@ -1,0 +1,36 @@
+{
+  "name": "@tencent/moss-demo",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint"
+  },
+  "author": "iccengan",
+  "license": "ISC",
+  "dependencies": {
+    "@tencent/eslint-config-tencent": "^0.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "eslintConfig": {
+      "extends": ["@tencent/eslint-config-tencent"],
+      "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true
+      },
+      "globals": {
+      "App": true,
+      "Page": true,
+      "Component": true,
+      "Behavior": true,
+      "wx": true,
+      "getApp": true,
+      "getCurrentPages": true
+      }
+    }
+}
