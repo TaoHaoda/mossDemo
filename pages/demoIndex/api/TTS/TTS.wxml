@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  <button bindtap='playTTS'>playTTS</button>
+  <button bindtap="stopTTS" style='margin-top:50rpx;'>stopTTS</button>
+</view>

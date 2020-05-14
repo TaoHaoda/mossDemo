@@ -2,3 +2,17 @@
 .line-name {
   margin-top: 10rpx;
 }
+.map {
+  width: 70vw;
+  height: 500rpx;
+}
+.contain {
+  width: 30vw;
+}
+.map-copy {
+  width: 0;
+  height: 0;
+}
+.content-copy {
+  width: 100vw;
+}

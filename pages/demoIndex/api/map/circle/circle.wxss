@@ -1,1 +1,9 @@
 /* pages/circle/circle.wxss */
+.map {
+  width: 100%; 
+  height: 600px;
+}
+.copy-map {
+  width: 0;
+  height: 0;
+}

@@ -8,77 +8,106 @@ Page({
     listShop: [
       {
         id: 0,
-        name: 'marker1',
+        name: '海南五指山市',
         type: ''
       },
       {
         id: 1,
-        name: 'marker2',
+        name: '广州白云山',
         type: ''
       },
       {
         id: 2,
-        name: 'marker3',
+        name: '开封琉璃塔',
         type: ''
       },
       {
         id: 3,
-        name: 'marker4',
+        name: '深圳腾讯大厦',
         type: ''
       }, 
       {
         id: 4,
-        name: 'marker5',
+        name: '北京天安门',
         type: ''
       }
     ],
+    latitude: "39.910540",
+    longitude: "116.397218",
     markers: [
       {
-        iconPath: "../../../../images/map.png",
+        // 18.929127, 109.696612 海南五指山市
+        iconPath: "../image/map.png",
         id: 0,
-        latitude: 23.099994,
-        longitude: 113.324520,
+        latitude: 18.929127,
+        longitude: 109.696612,
         width: 30,
         height: 30,
-        title: 'marker1'
+        callout: {
+          content: '海南五指山市',
+          display: "ALWAYS",
+          fontSize: 15,
+          bgColor: '#eee'
+        }
       },
       {
-        iconPath: "../../../../images/map.png",
+        iconPath: "../image/map.png",
         id: 1,
-        longitude: 113.324520,
-        latitude: 23.21229,
+        longitude: 109.696612,
+        latitude: 23.235701,
         width: 30,
         height: 30,
-        title: 'marker2'
+        callout: {
+          content: '广州白云山',
+          display: "ALWAYS",
+          fontSize: 15,
+          bgColor: '#eee'
+        }
 
       },
       {
-        iconPath: "../../../../images/map.png",
+        iconPath: "../image/map.png",
         id: 2,
-        longitude: 113.921612,
-        latitude: 22.545403,
+        longitude: 114.373845,
+        latitude: 34.828488,
         width: 30,
         height: 30,
-        title: 'marker3'
-      },
+        callout: {
+          content: '开封琉璃塔',
+          display: "ALWAYS",
+          fontSize: 15,
+          bgColor: '#eee'
+        }
+        
+       },
       {
-        iconPath: "../../../../images/map.png",
+        iconPath: "../image/map.png",
         id: 3,
-        longitude: 113.934629,
-        latitude: 22.539189,
+        longitude: 113.934416,
+        latitude: 22.540702,
         width: 30,
         height: 30,
-        title: 'marker4'
+        callout: {
+          content: '深圳腾讯大厦',
+          display: "ALWAYS",
+          fontSize: 15,
+          bgColor: '#eee'
+        }
 
       },
       {
-        iconPath: "../../../../images/map.png",
+        iconPath: "../image/map.png",
         id: 4,
-        longitude: 113.935369,
-        latitude: 21.540752,
+        longitude: 116.397218,
+        latitude: 39.910540,
         width: 30,
         height: 30,
-        title: 'marker5'
+        callout: {
+          content: '北京天安门',
+          display: "ALWAYS",
+          fontSize: 15,
+          bgColor: '#eee'
+        }
 
       }
     ]
@@ -88,7 +117,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let _this = this;
+    wx.isTAESMapEnable({
+      success: function (res) {
+        _this.setData({
+          TAES: res.taesMap
+        })
+      }
+    })
   },
 
   /**
@@ -151,13 +187,15 @@ Page({
     for (var i =0; i<marker.length; i++) {
       if (marker[i].id === data) {
         let data = 'markers[' + i + '].iconPath'
+        console.log(data);
         _this.setData({
-          [data]: "../../../../images/mapl.png"
+          [data]: "../image/mapl.png"
         })
+        // console.log(marker[i].id)
       } else {
         let data = 'markers[' + i + '].iconPath'
         _this.setData({
-          [data]: "../../../../images/map.png"
+          [data]: "../image/map.png"
         })
       }
     }
@@ -170,73 +208,45 @@ Page({
    */
   delteMarker: function (e) {
     let _this = this;
+    let markers = _this.data.markers;
+    markers.shift();
     _this.setData({
-      markers: []
+      markers: markers
     })
   },
   addMarker: function (e) {
     let _this = this;
-    let markers = [
-      {
-        iconPath: "../../../../images/map.png",
-        id: 0,
-        latitude: 23.099994,
-        longitude: 113.324520,
-        width: 30,
-        height: 30,
-        title: 'marker1'
-      },
-      {
-        iconPath: "../../../../images/map.png",
-        id: 1,
-        longitude: 113.324520,
-        latitude: 23.21229,
-        width: 30,
-        height: 30,
-        title: 'marker2'
-
-      },
-      {
-        iconPath: "../../../../images/map.png",
-        id: 2,
-        longitude: 113.921612,
-        latitude: 22.545403,
-        width: 30,
-        height: 30,
-        title: 'marker3'
-      },
-      {
-        iconPath: "../../../../images/map.png",
-        id: 3,
-        longitude: 113.934629,
-        latitude: 22.539189,
-        width: 30,
-        height: 30,
-        title: 'marker4'
-
-      },
-      {
-        iconPath: "../../../../images/map.png",
-        id: 4,
-        longitude: 113.935369,
-        latitude: 21.540752,
-        width: 30,
-        height: 30,
-        title: 'marker5'
-
+    let marker1 = {
+      iconPath: "../image/map.png",
+      id: 5,
+      longitude: 114.706219,
+      latitude: 23.765296,
+      width: 30,
+      height: 30,
+      callout: {
+        content: 'marker6',
+        display: "ALWAYS",
+        fontSize: 15,
+        bgColor: '#eee'
       }
-    ];
+    };
+
+    _this.data.markers.push(marker1);
+    let markers = _this.data.markers;
     _this.setData({
       markers: markers
     })
-
+    console.log('____', _this.data.markers);
+    
   },
   markertap: function (e) {
+    console.log('-------',e);
+    console.log(e)
     let shop = this.data.listShop;
     let _this = this;
     for (var j = 0; j < this.data.markers.length; j++) {
       _this.setData({
-        ['markers[' + j + '].iconPath']: '../../../../images/map.png'
+        ['markers[' + j + '].iconPath']: '../image/map.png'
       })
     }
     for (var i = 0; i < shop.length; i++) {
@@ -253,5 +263,11 @@ Page({
         })
       }
     }  
+  },
+  changeCenter: function () {
+    this.setData({
+      longitude: 114.706219,
+      latitude: 23.765296,
+    })
   }
 })

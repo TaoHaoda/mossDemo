@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* pages/demoIndex/api/speed/get-speed.wxss */
 .page-section {
   margin-top: 200rpx;
@@ -20,26 +19,3 @@
   line-height: 200rpx;
   font-size: 20px;
 }
-=======
-/* pages/demoIndex/api/speed/get-speed.wxss */
-.page-section {
-  margin-top: 200rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0 50rpx;
-  box-sizing: border-box;
-}
-.show-content {
-  width: 300rpx;
-  height: 200rpx;
-  background-color: #eee;
-  margin: 0 auto;
-  margin-top: 50rpx;
-  text-align: center;
-  line-height: 200rpx;
-  font-size: 20px;
-}
->>>>>>> ff4bf10d76893994cdcac111923a3e42ebf5ab9e

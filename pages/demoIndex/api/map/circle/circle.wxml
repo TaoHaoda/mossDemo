@@ -1,4 +1,6 @@
 <!--pages/linePic/line-pic.wxml-->
 <view>
-  <map id="map1" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location bindcallouttap="bindcallouttap" polygons='{{polygons}}'></map>
+  <map id="map1" longitude="113.934437" latitude="22.540672" scale="15" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location bindcallouttap="bindcallouttap" polygons='{{polygons}}' style="" class="{{TAES ? 'copy-map' : 'map'}}"></map>
+ <!-- <button bindtap='setPolygons' type='primary' class='btn'>设置polygons</button> -->
+ <!-- 22.540672, 113.934437 腾讯大厦 -->
 </view>
