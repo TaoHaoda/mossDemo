@@ -3,7 +3,6 @@ App({
   globalData: {
     openid: "",
   },
-
   onLaunch: function () {
     const value = wx.getStorageSync('key')
     console.log('testts ' + typeof value)
