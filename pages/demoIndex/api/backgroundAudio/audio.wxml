@@ -1,0 +1,7 @@
+<!--pages/demoIndex/api/backgroundAudio/audio.wxml-->
+<view>
+  <button bindtap='backgroundPlay'>播放</button>
+  <button bindtap="backgorundPause">停止</button>
+  <button bindtap="backgroundPre">上一首</button>
+  <button bindtap="backgroundNext">下一首</button>
+</view>

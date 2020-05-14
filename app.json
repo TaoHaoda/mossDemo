@@ -14,12 +14,19 @@
     "pages/demoIndex/api/power/get-remainpower",
     "pages/demoIndex/api/vin/get-vechicle-id",
     "pages/demoIndex/api/wheelRotation/get-wheel-rotation-angle",
-    "pages/demoIndex/api/car-eventlistener/add-vehicle-event-listener"
+    "pages/demoIndex/api/car-eventlistener/add-vehicle-event-listener",
+    "pages/demoIndex/api/taiLog/onTai",
+    "pages/demoIndex/api/map/map",
+    "pages/demoIndex/api/map/pointPic/point",
+    "pages/demoIndex/api/map/linePic/line-pic",
+    "pages/demoIndex/api/map/circle/circle",
+    "pages/demoIndex/api/backgroundAudio/audio"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

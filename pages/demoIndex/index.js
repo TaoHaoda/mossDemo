@@ -39,6 +39,15 @@ Page({
           }, {
             zh: '监听车辆信息变化',
             url: 'api/car-eventlistener/add-vehicle-event-listener'
+          }, {
+            zh: 'tai账号退出登陆通知',
+            url: 'api/taiLog/onTai'
+          }, {
+            zh: 'map地图组件',
+            url: 'api/map/map'
+          }, {
+            zh: '背景音乐播放',
+            url: 'api/backgroundAudio/audio'
           }
         ]
       }

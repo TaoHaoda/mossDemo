@@ -1,0 +1,9 @@
+/* pages/demoIndex/api/taiLog/onTai.wxss */
+.tai-con {
+  text-align: center;
+  margin-top: 100rpx;
+}
+
+.tai {
+  font-size: 18px;
+}

@@ -1,0 +1,5 @@
+/* pages/pointPic/point.wxss */
+.shop-name {
+  margin-top: 30rpx;
+  width: 50vw;
+}

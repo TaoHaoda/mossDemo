@@ -1,0 +1,12 @@
+<!--pages/pointPic/point.wxml-->
+<view>
+<button wx:for="{{listShop}}" class='shop-name' data-id="{{item.id}}" bindtap="findMarker" type='{{item.type}}'>{{item.name}}</button>
+  <map id="map1" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location bindcallouttap="bindcallouttap" polygons='{{polygons}}' style='width:100%;height: 300px;'></map>
+  <view>
+    
+  </view>
+  <button bindtap="delteMarker" type='primary'>删除全部marker</button>
+  <button bindtap="addMarker" type='primary'>增加全部marker</button>
+
+  
+</view>

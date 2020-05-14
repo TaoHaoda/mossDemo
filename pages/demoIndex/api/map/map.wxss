@@ -1,0 +1,4 @@
+/* pages/demoIndex/api/map/map.wxss */
+.btn {
+  width: 60vw;
+}

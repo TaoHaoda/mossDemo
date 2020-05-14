@@ -1,0 +1,4 @@
+/* pages/linePic/line-pic.wxss */
+.line-name {
+  margin-top: 10rpx;
+}

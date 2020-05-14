@@ -1,0 +1,5 @@
+<!--pages/demoIndex/api/taiLog/onTai.wxml-->
+<view class='tai-con'>
+  <text class='tai'>tai账号退出登陆通知</text>
+</view>
+

@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.2",
-	"appid": "wxd786341fe433552f",
+	"appid": "wx33ae4e08cf8e0cb7",
 	"projectname": "moss-app-demo",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -77,6 +77,20 @@
 					"id": -1,
 					"name": "pages/demoIndex/api/car-eventlistener/add-vehicle-event-listener",
 					"pathName": "pages/demoIndex/api/car-eventlistener/add-vehicle-event-listener",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demoIndex/api/map/map",
+					"pathName": "pages/demoIndex/api/map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demoIndex/api/backgroundAudio/audio",
+					"pathName": "pages/demoIndex/api/backgroundAudio/audio",
 					"scene": null
 				}
 			]

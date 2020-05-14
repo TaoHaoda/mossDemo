@@ -1,0 +1,7 @@
+<!--pages/demoIndex/api/map/map.wxml-->
+<view>
+  <button bindtap='goUrlPoint' type='primary' class='btn'>点+图</button>
+  <button bindtap='goUrlLine'type='primary' class='btn'>线+图</button>
+  <button bindtap='goUrlCover' type='primary' class='btn'>面+图</button>
+  <button bindtap='checkMap' type='primary' class='btn'>查看地图是否有端能力</button>
+</view>
