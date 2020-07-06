@@ -21,7 +21,8 @@
     "pages/demoIndex/api/map/linePic/line-pic",
     "pages/demoIndex/api/map/circle/circle",
     "pages/demoIndex/api/backgroundAudio/audio",
-    "pages/demoIndex/api/TTS/TTS"
+    "pages/demoIndex/api/TTS/TTS",
+    "pages/demoIndex/api/player/player"
   ],
   "window": {
     "backgroundTextStyle": "light",

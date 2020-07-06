@@ -1,0 +1,62 @@
+<!--logs.wxml-->
+<view class="player-component container">
+  <view class="content-container">
+    <view class="player">
+      <view class="media-title">{{media.name}}　歌手：{{media.author}}</view>
+      <view class="process-bar {{isDrag}}">
+        <view class="process-crtl" style="left:{{musicTime.process}}" bindtouchstart="dragStartHandle"
+        bindtouchmove="touchmove" catch:touchmove bindtouchend="dragEndHandle"></view>
+        <view class="process-bg" style="width:{{musicTime.process}}"></view>
+      </view>
+      <view class="media-time">
+        <view class="currentTime">{{musicTime.currentTimeText}}</view>
+        <view class="duration">{{media.duration}}</view>
+      </view>
+      <view class="media-control">
+        <image class="icon-album" src="/images/dark/icon_list.png" bindtap="showPlayList"></image>
+        <view class="media-control-btn">
+          <image class="media-prev" src="/images/dark/icon_pre.png" bindtap="prevHandle" id="btn_prev"></image>
+          <image class="media-play" src="/images/dark/icon_player_pause.png" wx:if="{{!playing}}" bindtap="playHandle"></image>
+          <image class="media-pause" src="/images/dark/icon_pause.png" wx:if="{{playing}}" bindtap="pauseHandle"></image>
+          <image class="media-next" src="/images/dark/icon_next.png" bindtap="nextHandle" id="btn_next"></image>
+        </view>
+        <image class="media-loop" src="/images/dark/icon_palyer_single.png" wx:if="{{loopType == 'single'}}" bindtap="singleHandle"></image>
+        <image class="media-loop" src="/images/dark/icon_loop.png" wx:if="{{loopType == 'loop'}}" bindtap="loopHandle"></image>
+        <image class="media-loop" src="/images/dark/icon_random.png" wx:if="{{loopType == 'random'}}" bindtap="randomHandle"></image>
+      </view>
+    </view>
+    <image class="media-cover" src="{{media.poster}}"  bindtap="logHandle"></image>
+    <view class="album-list" style="top:{{playListPos}};">
+      <view class="album-bar">
+        <view class="album-back" bindtap="hidePlayList">
+          <image class="album-back-icon" src="/images/dark/icon_down.png"></image>
+          收起
+        </view>
+      </view>
+      <image class="album-list-cover" src="{{media.coverUrl}}" data-idx="{{playIdx}}"></image>
+      <scroll-view class="story-scroll-view" scroll-y="true">
+        <view class="radio-list">
+          <view class="radio-item" wx:for="{{playList}}" wx:key="id" data-idx="{{index}}" catchtap="mediaSelectHandle">
+            <view class="cover-box">
+              <image class="radio-item-cover" src="{{item.poster}}" data-idx="{{index}}"></image>
+              <image class="radio-item-active" src="/images/dark/playing.gif" wx:if="{{index == playIdx}}"></image>
+            </view>
+            <view class="radio-item-info">
+              <view class="radio-item-title">{{item.name}}</view>
+              <view class="radio-item-summary">
+                <image class="summary-icon" src="/images/dark/icon_list_time.png"></image>
+                <view class="summary-text">{{item.duration}}</view>
+                <image class="summary-icon" src="/images/dark/icon_list_amount.png"></image>
+                <view class="summary-text">{{item.amountText}}</view>
+                <image class="summary-icon" src="/images/dark/icon_list_comments.png"></image>
+                <view class="summary-text">{{item.commentText}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+<log id="mylog">
+</log>

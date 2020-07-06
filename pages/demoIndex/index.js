@@ -51,6 +51,9 @@ Page({
           }, {
             zh: 'TTS播报',
             url: 'api/TTS/TTS'
+          }, {
+            zh: '播放面板',
+            url: 'api/player/player'
           }
         ]
       }
